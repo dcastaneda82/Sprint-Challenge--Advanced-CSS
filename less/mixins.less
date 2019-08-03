@@ -1,1 +1,37 @@
-// Mixins Here
+.headers(@align) {
+    display: flex;
+    flex-direction: column;
+    align-items: @align;
+    background-color: white;
+}
+
+.navText(@size, @font) {
+    font-size: @size;
+    font-family: @font;
+    text-decoration: none;
+    padding: 0px 25px 0 25px;
+    color: black;
+}
+
+.navbar() {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navItems() {
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+        color: lighten(black, 50%);
+    }
+
+    @media @mobile {
+        font-size: 1.6rem;
+        padding: 0px 9px;
+    }
+}
